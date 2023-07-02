@@ -1,3 +1,4 @@
+import { chatbotPrompt } from "@/app/helpers/constants/chatbot-prompts"
 import { ChatGPTMessage } from "@/lib/openAI-stream"
 import { messageArraySchema } from "@/lib/validators/message"
 
@@ -19,6 +20,6 @@ content: message.text
 // The unshift method adds things to the start of an array
 outboundMessages.unshift({
     role: 'system',
-    content: chatBotPrompt
+    content: chatbotPrompt
 })
 }
